@@ -70,7 +70,7 @@ export default function App() {
         itemSelctDeletProp={itemSelctDelet}
         eventoEliminar ={eliminarItem}
         setModalVisibleEvent={setModalVisible}
-
+        
       />
 
     </View>
