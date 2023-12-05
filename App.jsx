@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FlatList} from 'react-native';
 import { StyleSheet, Text, View,TextInput, Button} from 'react-native';
 import CustomModal from './Componets/CustomModal'
+import CustomInput from './Componets/CustomInput';
 
 
 export default function App() {
@@ -37,7 +38,7 @@ export default function App() {
     return(
       <View style={styles.renderListItem}>
         <Text margin={10} >{item.value}</Text>
-        <Button title='X' color="#E57A44" onPress={()=>seleccionarItem(item.id)}/>
+        <Button title='Comprar' color="#E57A44" onPress={()=>seleccionarItem(item.id)}/>
       </View>
     )
   }
@@ -47,15 +48,13 @@ export default function App() {
     <>
     <View style={styles.container}>
 
-      <View style={styles.textInput}>
-        <TextInput style={styles.text} 
-        placeholder='ingrese un Auto'
-        onChangeText={onChangeTextHandler}
-        value={textItem}
-        />
-        <Button title='agregar'
-        onPress={addItemList}/>
-      </View>
+      <CustomInput
+        placeholderProp= "Ingrese un Auto"
+        textItemProp= {textItem}
+        onChangeTextHandlerEvent={onChangeTextHandler}
+        addItemListEvent = {addItemList}
+      
+      />
 
       <FlatList
         data={itemList}
@@ -70,29 +69,10 @@ export default function App() {
         itemSelctDeletProp={itemSelctDelet}
         eventoEliminar ={eliminarItem}
         setModalVisibleEvent={setModalVisible}
-
+        
       />
 
     </View>
-    {/*<Modal animationType='slide' visible={modalVisible}>
-
-      <View style={styles.modalMensaje}>
-
-        <Text>Se eliminará el auto: </Text>
-
-        <Text>{itemSelctDelet.value}</Text>
-
-      </View>
-
-      <View style={styles.modalBotones}>
-
-        <Button title='Eliminar' color={"#F05D5E"} onPress={()=> eliminarItem()}/>
-
-        <Button title='Cancelar' color={"#272932"} onPress={()=> setModalVisible(!modalVisible)}/>
-
-      </View>
-
-    </Modal>*/}
       
     </>
   );
