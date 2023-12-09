@@ -1,7 +1,7 @@
 import { View,Text,StyleSheet} from "react-native"
 
 
-const DetalleProducto = ()=>{
+const ProductDetail = ()=>{
 
     return(
         <View style={styles.container}>
@@ -10,13 +10,9 @@ const DetalleProducto = ()=>{
     )
 }
 
-export default DetalleProducto;
+export default ProductDetail;
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      padding:30,
-    }
+   
 
 })

@@ -1,108 +1,44 @@
+import { ActivityIndicator } from 'react-native';
+import Categories from './Componets/Screens/Categories';
+import {useFonts} from "expo-font";
+import ProductByCategory from "./Componets/Screens/ProductByCategory"
 import { useState } from 'react';
-import { FlatList} from 'react-native';
-import { StyleSheet, Text, View,TextInput, Button} from 'react-native';
-import CustomModal from './Componets/CustomModal'
-import CustomInput from './Componets/CustomInput';
 
 
 export default function App() {
-  const [textItem,setTextItem] = useState("");
-  const [itemList,setItemList] = useState([]);
-  const [itemSelctDelet, setItemSelectDelet] = useState({})
-  const [modalVisible, setModalVisible] = useState(false)
+  const [fontLoaded] = useFonts({
+    "Roboto-Regular": require("./assets/Roboto/Roboto-Regular.ttf"),
+    "Roboto-Bold": require("./assets/Roboto/Roboto-Bold.ttf")
+   
+  })
+  const [categorySelect,setCategorySelect] = useState("")
 
+  console.log("categoria seleccionada: ",categorySelect)
 
-  const onChangeTextHandler = (text) =>{
-    setTextItem(text)
+  if(!fontLoaded) return <ActivityIndicator/>
+
+  const onSelectCategory = (category) =>{
+      setCategorySelect(category)
   }
-
-  const addItemList = () =>{
-    setItemList (prevState => [...prevState,{id: Math.random().toString(),value:textItem}])
-    console.log(itemList)
-    setTextItem("")
-  }
-
-  const seleccionarItem = (id) =>{
-    setModalVisible(!modalVisible)
-    setItemSelectDelet(itemList.find((item)=>item.id === id))
-  }
-
-  const eliminarItem = () =>{
-    setItemList(itemList.filter((item)=>item.id !== itemSelctDelet.id))
-    setModalVisible(!modalVisible)
-  }
-
-  
-
-  const renderListItem = ({item}) =>{
-    return(
-      <View style={styles.renderListItem}>
-        <Text margin={10} >{item.value}</Text>
-        <Button title='Comprar' color="#E57A44" onPress={()=>seleccionarItem(item.id)}/>
-      </View>
-    )
-  }
-
 
   return (
+
     <>
-    <View style={styles.container}>
+      {
+        categorySelect
+          ?
+          <ProductByCategory category={categorySelect}/>
+          :
+          <Categories onSelectCategoryEvent ={onSelectCategory}/>
+      }
 
-      <CustomInput
-        placeholderProp= "Ingrese un Auto"
-        textItemProp= {textItem}
-        onChangeTextHandlerEvent={onChangeTextHandler}
-        addItemListEvent = {addItemList}
-      
-      />
 
-      <FlatList
-        data={itemList}
-        renderItem={renderListItem}
-        keyExtractor={item=>item.id}
-      />
-
-      <CustomModal
-
-        animationTypeProp="slide"
-        modalVisibleprop={modalVisible}
-        itemSelctDeletProp={itemSelctDelet}
-        eventoEliminar ={eliminarItem}
-        setModalVisibleEvent={setModalVisible}
-        
-      />
-
-    </View>
       
     </>
+    
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    padding:30,
-  },
-  textInput:{
-    flexDirection:"row",
-    justifyContent:"space-evenly",
 
-  },
-  text:{
-    borderBottomColor: "black",
-    width:200,
-    borderBottomWidth:1,
-  },
-  renderListItem:{
-    flexDirection:"row",
-    justifyContent: "space-between",
-    margin:10,
-    backgroundColor:"#E3D985",
-    borderRadius: 20,
-    
-  }
- 
   
-});
 

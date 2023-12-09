@@ -23,9 +23,6 @@ const CustomModal = (props) => {
         <View style={styles.modalBotones}>
   
           <Button title='Comprar Auto' color={"#F05D5E"} onPress={eventoEliminar}/>
-
-          <Button title='Eliminar' color={"#F05D5E"} onPress={eventoEliminar}/>
-
   
           <Button title='Cancelar' color={"#272932"} onPress={()=> setModalVisibleEvent(false)}/>
           
