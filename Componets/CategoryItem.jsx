@@ -4,11 +4,11 @@ import{Colors} from "./Global/Colors";
 import { TouchableOpacity } from "react-native";
 
 
-const CategoryItem = ({category, onSelectCategoryEvent}) =>{
+const CategoryItem = ({category, navigation}) =>{
 
     return(
 
-        <TouchableOpacity onPress={()=>onSelectCategoryEvent(category)}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Autos Por Categoria',{category})}>
             <Card style={styles.CardContainer}>
                 <Text style={styles.text}>{category}</Text>
             </Card>

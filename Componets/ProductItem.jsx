@@ -1,9 +1,9 @@
 import { View,TouchableOpacity,Text,StyleSheet,Image} from "react-native"
 
 
-const ProductItem = ({product}) =>{
+const ProductItem = ({product, navigation}) =>{
     return(
-        <TouchableOpacity style={styles.ContainerProductItem}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Detalle Auto', product.id)} style={styles.ContainerProductItem}>
             <Text style={styles.productTitle}>{product.title}</Text>
             <Image style={styles.productImage} resizeMode="cover" source={{uri: product.thumbnail}} />
         </TouchableOpacity>
