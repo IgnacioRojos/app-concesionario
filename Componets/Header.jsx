@@ -7,7 +7,7 @@ const Header = ({title,navigation})=>{
     return(
         <View style={styles.container}>
             <TouchableOpacity onPress={navigation.goBack}>
-                <AntDesign name="back" size={24} color="black" />
+                <AntDesign name="leftcircle" size={24} color="black" style={styles.button} />
             </TouchableOpacity>
             <Text style={styles.title}>{title}</Text>
         </View>
@@ -20,14 +20,21 @@ const styles = StyleSheet.create({
     container: {
         height:100,
         flexDirection:"row",
-        justifyContent:"space-between",
-        paddingHorizontal:30,
         alignItems:"center",
         backgroundColor:"#9FA4C4"
     },
     title: {
         color:"#000000",
-        fontFamily: "Roboto-Bold"
+        fontFamily: "Roboto-Bold",
+        alignItems:"center",
+        flexDirection:"row",
+        justifyContent:"center",
+        marginLeft:100,
+        fontSize:15
+    },
+    button:{
+      marginLeft:10  
     }
 
+    
 })

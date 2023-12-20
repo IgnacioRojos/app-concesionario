@@ -4,12 +4,14 @@ import { FlatList } from "react-native";
 import ProductItem from "../ProductItem";
 //import Header from "../Header";
 import { useEffect, useState } from "react";
+import Search from "../Search";
 
 
 const ProductByCategory = ({navigation, route})=>{
 
 
     const[productsByCategory, setProductsByCategory] = useState([])
+    const[search,setSearch] = useState("")
 
     const {category} = route.params
 
@@ -17,8 +19,10 @@ const ProductByCategory = ({navigation, route})=>{
 
     useEffect(()=>{
         const productsFilterByCategory = products_data.filter(product =>product.category === category)
-        setProductsByCategory(productsFilterByCategory)
-    },[category])
+        const productFilter= productsFilterByCategory.filter(
+            product=>product.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
+        setProductsByCategory(productFilter)
+    },[category,search])
 
 
     const renderProductsItem =({item}) =>(
@@ -27,10 +31,14 @@ const ProductByCategory = ({navigation, route})=>{
         </View>
             
     )
+    const onSearch = () =>{
+        setSearch(search)
+    }
 
 
     return(
         <>
+            <Search onSearchEvent={onSearch}/>
             <FlatList
                 data={productsByCategory}
                 renderItem={renderProductsItem}

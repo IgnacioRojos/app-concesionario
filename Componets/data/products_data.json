@@ -11,11 +11,8 @@
         "category": "Volkswagen",
         "thumbnail": "https://www.clarin.com/img/2023/09/08/lO-2v3pFU_1256x620__1.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/4.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+            "https://media.cdn.puntobiz.com.ar/012023/1673618989189.webp?cw=984&ch=553&extw=jpg"
+
         ]
     },
     {
@@ -30,10 +27,8 @@
         "category": "Volkswagen",
         "thumbnail": "https://cdn.motor1.com/images/mgl/39A06/s1/el-vw-bora-se-acerca-a-su-fin-y-buscan-sucesor-para-argentina.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/2/1.jpg",
-            "https://i.dummyjson.com/data/products/2/2.jpg",
-            "https://i.dummyjson.com/data/products/2/3.jpg",
-            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+            "https://espirituracer.com/archivos/2022/07/volkswagen-bora-1.webp"
+
         ]
     },
     {
@@ -48,7 +43,7 @@
         "category": "Volkswagen",
         "thumbnail": "https://www.multinversiones.com.ar/wp-content/uploads/2017/02/image0012.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/3/1.jpg"
+            "https://fotos.perfil.com/2023/01/12/volkswagen-up-gti-1490563.jpg"
         ]
     },
     {
@@ -63,11 +58,8 @@
         "category": "Volkswagen",
         "thumbnail": "https://sudamerics.com.ar/wp-content/uploads/2023/03/VW_Gol_Trend-800x600-1.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/4/1.jpg",
-            "https://i.dummyjson.com/data/products/4/2.jpg",
-            "https://i.dummyjson.com/data/products/4/3.jpg",
-            "https://i.dummyjson.com/data/products/4/4.jpg",
-            "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
+            "https://sudamerics.com.ar/wp-content/uploads/2023/03/VW_Gol_Trend-800x600-1.jpg"
+            
         ]
     },
     {
@@ -82,9 +74,7 @@
         "category": "Volkswagen",
         "thumbnail": "https://pxb.cdn.elchubut.com.ar/chubut/032022/1648693299286.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/5/1.jpg",
-            "https://i.dummyjson.com/data/products/5/2.jpg",
-            "https://i.dummyjson.com/data/products/5/3.jpg"
+            "https://resizer.iproimg.com/unsafe/880x/filters:format(webp)/https://assets.iprofesional.com/assets/png/2022/09/541876.png"
         ]
     },
     {
@@ -99,10 +89,7 @@
         "category": "Fiat",
         "thumbnail": "https://cdn.motor1.com/images/mgl/AoBZN/s1/lanzamiento-fiat-punto-2013.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/6/1.png",
-            "https://i.dummyjson.com/data/products/6/2.jpg",
-            "https://i.dummyjson.com/data/products/6/3.png",
-            "https://i.dummyjson.com/data/products/6/4.jpg"
+            "https://cdn.motor1.com/images/mgl/AoBZN/s1/lanzamiento-fiat-punto-2013.jpg"
         ]
     },
     {
@@ -117,10 +104,7 @@
         "category": "Fiat",
         "thumbnail": "https://cdn.buttercms.com/u2qFiQAASIWzoINv6QIx",
         "images": [
-            "https://i.dummyjson.com/data/products/7/1.jpg",
-            "https://i.dummyjson.com/data/products/7/2.jpg",
-            "https://i.dummyjson.com/data/products/7/3.jpg",
-            "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
+            "https://motorshow.files.wordpress.com/2007/12/siena2008-004.jpg?w=584"
         ]
     },
     {
@@ -135,11 +119,7 @@
         "category": "Fiat",
         "thumbnail": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/s/RT_V_e3e610f4f4f04acbacbb97b281b49296.webp",
         "images": [
-            "https://i.dummyjson.com/data/products/8/1.jpg",
-            "https://i.dummyjson.com/data/products/8/2.jpg",
-            "https://i.dummyjson.com/data/products/8/3.jpg",
-            "https://i.dummyjson.com/data/products/8/4.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+            "https://cdn.motor1.com/images/mgl/4yRVq/s1/lanzamiento-fiat-cronos-1-3-attractive-base.jpg"
         ]
     },
     {
@@ -154,11 +134,7 @@
         "category": "Fiat",
         "thumbnail": "https://www.megautos.com/wp-content/uploads/2022/03/Fiat-Mobi-Like-2022-delantera.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/9/1.jpg",
-            "https://i.dummyjson.com/data/products/9/2.png",
-            "https://i.dummyjson.com/data/products/9/3.png",
-            "https://i.dummyjson.com/data/products/9/4.jpg",
-            "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
+            "https://blog.karvi.com.ar/wp-content/uploads/2020/10/Mobi-Trekking.jpg"
         ]
     },
     {
@@ -173,10 +149,7 @@
         "category": "Fiat",
         "thumbnail": "https://www.megautos.com/wp-content/uploads/2020/09/Fiat-Argo-Drive-2021-delantera.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/10/1.jpg",
-            "https://i.dummyjson.com/data/products/10/2.jpg",
-            "https://i.dummyjson.com/data/products/10/3.jpg",
-            "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+            "https://cdn.motor1.com/images/mgl/myJ44/s1/lanzamiento-fiat-argo-2020.webp"
         ]
     },
     {
@@ -191,10 +164,7 @@
         "category": "Toyota",
         "thumbnail": "https://media.toyota.com.ar/629ec3dd-9c24-4957-8798-9790c5b31a0c.png",
         "images": [
-            "https://i.dummyjson.com/data/products/11/1.jpg",
-            "https://i.dummyjson.com/data/products/11/2.jpg",
-            "https://i.dummyjson.com/data/products/11/3.jpg",
-            "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
+            "https://acnews.blob.core.windows.net/imgnews/large/NAZ_7120146571954e68ae9054868797ed92.jpg"
         ]
     },
     {
@@ -209,11 +179,7 @@
         "category": "Toyota",
         "thumbnail": "https://cdn.motor1.com/images/mgl/vkekA/s1/toyota-hilux-2021.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/12/1.jpg",
-            "https://i.dummyjson.com/data/products/12/2.jpg",
-            "https://i.dummyjson.com/data/products/12/3.png",
-            "https://i.dummyjson.com/data/products/12/4.jpg",
-            "https://i.dummyjson.com/data/products/12/thumbnail.jpg"
+            "https://media.diariouno.com.ar/p/4d66536aa636a887d2d332ed7490c0e7/adjuntos/298/imagenes/009/075/0009075011/1200x0/smart/nueva-pick-up-hiluxjpg.jpg"
         ]
     },
     {
@@ -228,11 +194,7 @@
         "category": "Chevrolet",
         "thumbnail": "https://fotos.perfil.com/2022/12/15/chevrolet-corsa-1473562.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/13/1.jpg",
-            "https://i.dummyjson.com/data/products/13/2.png",
-            "https://i.dummyjson.com/data/products/13/3.jpg",
-            "https://i.dummyjson.com/data/products/13/4.jpg",
-            "https://i.dummyjson.com/data/products/13/thumbnail.webp"
+            "https://conduciendo.com/wp-content/uploads/2017/10/11358.jpg"
         ]
     },
     {
@@ -247,10 +209,7 @@
         "category": "Jeep",
         "thumbnail": "https://cdn.motor1.com/images/mgl/BXO9Le/s1/jeep-renegade-2022.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/14/1.jpg",
-            "https://i.dummyjson.com/data/products/14/2.jpg",
-            "https://i.dummyjson.com/data/products/14/3.jpg",
-            "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
+            "https://fotos.perfil.com/2022/02/11/jeep-renegade-1311287.jpg"
         ]
     },
     {
@@ -265,11 +224,7 @@
         "category": "Chevrolet",
         "thumbnail": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2019-cruze-premier/colorizer/enero-21/colorizer-azul-eclipse.jpg?imwidth=960",
         "images": [
-            "https://i.dummyjson.com/data/products/15/1.jpg",
-            "https://i.dummyjson.com/data/products/15/2.jpg",
-            "https://i.dummyjson.com/data/products/15/3.jpg",
-            "https://i.dummyjson.com/data/products/15/4.jpg",
-            "https://i.dummyjson.com/data/products/15/thumbnail.jpg"
+            "https://cdn.motor1.com/images/mgl/1bRAw/s1/lanzamiento-chevrolet-cruze-lt-2020.jpg"
         ]
     },
     {
@@ -284,11 +239,7 @@
         "category": "Ford",
         "thumbnail": "https://www.clarin.com/img/2016/03/11/r1XImSZcNx_1256x620.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/16/1.png",
-            "https://i.dummyjson.com/data/products/16/2.webp",
-            "https://i.dummyjson.com/data/products/16/3.jpg",
-            "https://i.dummyjson.com/data/products/16/4.jpg",
-            "https://i.dummyjson.com/data/products/16/thumbnail.jpg"
+            "https://www.ford.com.ar/content/dam/Ford/website-assets/latam/ar/nameplate/ka/ka-s/billboard/far-ka-s-model-detail-desk.jpg/jcr:content/renditions/small.jpeg"
         ]
     },
     {
@@ -303,10 +254,7 @@
         "category": "Ford",
         "thumbnail": "https://hips.hearstapps.com/hmg-prod/images/2022-next-gen-ranger-raptor-exterior-19-1645513829.jpg",
         "images": [
-            "https://i.dummyjson.com/data/products/17/1.jpg",
-            "https://i.dummyjson.com/data/products/17/2.jpg",
-            "https://i.dummyjson.com/data/products/17/3.jpg",
-            "https://i.dummyjson.com/data/products/17/thumbnail.jpg"
+            "https://cdn.motor1.com/images/mgl/6ZzOjr/s1/hennessey-velociraptor-500-ford-ranger-raptor.jpg"
         ]
     },
     {
@@ -321,11 +269,7 @@
         "category": "Ford",
         "thumbnail": "https://cdn.motor1.com/images/mgl/zzJ7q/s1/4x3/lanzamiento-ford-focus-iii-2017.webp",
         "images": [
-            "https://i.dummyjson.com/data/products/18/1.jpg",
-            "https://i.dummyjson.com/data/products/18/2.jpg",
-            "https://i.dummyjson.com/data/products/18/3.jpg",
-            "https://i.dummyjson.com/data/products/18/4.jpg",
-            "https://i.dummyjson.com/data/products/18/thumbnail.jpg"
+            "https://www.ford.com.ar/content/dam/Ford/website-assets/latam/ar/ford-credit/nuevo-focus-tasa-especial/Ford-Credit-nuevo-focus_1440x628.jpg/jcr:content/renditions/small.jpg"
         ]
     }
 ]

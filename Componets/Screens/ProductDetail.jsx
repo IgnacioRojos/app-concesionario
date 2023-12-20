@@ -40,11 +40,11 @@ const ProductDetail = ({route})=>{
                             <Image source={{uri: productSelect.images[0] }} resizeMode="cover"
                                 style={isPortrait ? styles.imageProduct : styles.imageProductLandscape}
                             />
-                            <View>
+                            <View style={styles.detailContainer}>
                                 <Text style={styles.title}>{productSelect.title}</Text>
                                 <Text style={styles.description}>{productSelect.description}</Text>
-                                <Text style={styles.price}>{productSelect.price}</Text>
-                                <TouchableOpacity onPress={()=> null}>
+                                <Text style={styles.price}>Precio: {productSelect.price}</Text>
+                                <TouchableOpacity style={styles.buyButton} onPress={()=> null}>
                                     <Text style={styles.buyText}>Comprar</Text>
                                 </TouchableOpacity>
                             </View>
@@ -72,11 +72,33 @@ const styles = StyleSheet.create({
         width:"100%",
         height:400,
     },
+    title:{
+        fontFamily: "Roboto-Bold",
+        fontSize:32,
+    },
+    description:{
+        fontSize:23,
+        fontFamily: "Roboto-Bold"
+    },
+    price:{
+        fontFamily: "Roboto-Bold",
+        fontSize:32,
+        color:"black"  
+    },
+    buyButton:{
+        marginTop:10,
+        width:200,
+        padding:10,
+        alignItems:"center",
+        backgroundColor:"#9ccc65",
+        borderRadius:10
+
+    },
+    detailContainer:{
+        alignItems:"center"
+    }
    
 
 })
 
 
-/*<View style={styles.container}>
-<Text>{productSelect.title}</Text>
-</View>*/
