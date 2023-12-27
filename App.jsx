@@ -1,12 +1,8 @@
 import { ActivityIndicator } from 'react-native';
-//import Categories from './Componets/Screens/Categories';
 import {useFonts} from "expo-font";
-//import ProductByCategory from "./Componets/Screens/ProductByCategory"
-import { useState } from 'react';
-//import ProductDetail from './Componets/Screens/ProductDetail';
-
-import Navigation from './Componets/Navigation/Navigation';
-
+import TabNavigation from "./Componets/Navigation/TabNavigation"
+import { Provider } from 'react-redux';
+import store from './Componets/Store/Store';
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -14,44 +10,24 @@ export default function App() {
     "Roboto-Bold": require("./assets/Roboto/Roboto-Bold.ttf")
    
   })
-  const [categorySelect,setCategorySelect] = useState("")
-  const [productIdSelect, setProductIdSelect] = useState(null)
 
-  console.log("categoria seleccionada: ",categorySelect)
 
   if(!fontLoaded) return <ActivityIndicator/>
 
-  const onSelectCategory = (category) =>{
-      setCategorySelect(category)
-  }
-
-  const onSelectProductId = (productId) =>{
-       setProductIdSelect(productId)   
-  }
 
   return (
+    <Provider store={store}>
 
-    <Navigation/>
+      <TabNavigation/>
+
+    </Provider>
+
+
     
   )
 
 }
 
 
-    {/*<>
-      {
-        productIdSelect?
-          <ProductDetail productId={productIdSelect}/>
-          :
-        categorySelect
-          ?
-          <ProductByCategory category={categorySelect} onSelectProductIdEvent={onSelectProductId}/>
-          :
-          <Categories onSelectCategoryEvent ={onSelectCategory}/>
-      }
-
-
-      
-    </>*/}
   
 

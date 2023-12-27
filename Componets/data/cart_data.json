@@ -1,0 +1,35 @@
+[
+    {
+        "id": 2,
+        "title": "Wolsvagen Bora",
+        "description": "Motor y transmisión: Cilindrada 1.781 N° de cilindros Valvulas 4 20V Potencia 180 CV",
+        "price": 899,
+        "discountPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "brand": "",
+        "category": "Volkswagen",
+        "thumbnail": "https://cdn.motor1.com/images/mgl/39A06/s1/el-vw-bora-se-acerca-a-su-fin-y-buscan-sucesor-para-argentina.jpg",
+        "images": [
+            "https://espirituracer.com/archivos/2022/07/volkswagen-bora-1.webp"
+
+        ],
+        "quantity": 2
+    },
+    {
+        "id": 6,
+        "title": "fiat punto",
+        "description": "Motor y transmisión: Cilindrada 1.368 N° de cilindros y disposición 4 en linea Potencia máxima (CV/rpm) 85 / 5.750",
+        "price": 1749,
+        "discountPercentage": 11.02,
+        "rating": 4.57,
+        "stock": 83,
+        "brand": "",
+        "category": "Fiat",
+        "thumbnail": "https://cdn.motor1.com/images/mgl/AoBZN/s1/lanzamiento-fiat-punto-2013.jpg",
+        "images": [
+            "https://cdn.motor1.com/images/mgl/AoBZN/s1/lanzamiento-fiat-punto-2013.jpg"
+        ],
+        "quantity": 1
+    }
+]

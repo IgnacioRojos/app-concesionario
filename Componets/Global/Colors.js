@@ -1,4 +1,6 @@
 export const Colors ={
-    primary: "#A9C5A0",
-    secundary: "black"
+    primary: "#e57373",
+    secundary: "black",
+    tab:"#f44336",
+    header: "#f44336",
 }

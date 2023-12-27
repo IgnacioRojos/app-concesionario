@@ -1,14 +1,22 @@
 import { Text,StyleSheet } from "react-native";
 import Card from "./Card";
-import{Colors} from "./Global/Colors";
 import { TouchableOpacity } from "react-native";
+import { useDispatch } from "react-redux";
+import { setCategorySelected } from "./Feactures/ShopSlice";
+import { setCategorySelected } from "./Feactures/ShopSlice";
+
+const dispatch = useDispatch()
 
 
 const CategoryItem = ({category, navigation}) =>{
 
     return(
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Autos Por Categoria',{category})}>
+        <TouchableOpacity onPress={()=>{
+            navigation.navigate('Autos Por Categoria',{category})
+            dispatch(setCategorySelected(category))
+            }            
+            }>
             <Card style={styles.CardContainer}>
                 <Text style={styles.text}>{category}</Text>
             </Card>
@@ -23,7 +31,7 @@ const CategoryItem = ({category, navigation}) =>{
 
 const styles = StyleSheet.create({
     CardContainer:{
-        backgroundColor:Colors.primary,
+        backgroundColor:"#607d8b",
         padding:10,
         margin:10
     },

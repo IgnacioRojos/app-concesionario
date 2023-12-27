@@ -1,14 +1,24 @@
 import { View,Text,StyleSheet,TouchableOpacity} from "react-native"
 import { AntDesign } from '@expo/vector-icons'; 
+import {Colors} from "./Global/Colors"
 
 
 const Header = ({title,navigation})=>{
 
     return(
         <View style={styles.container}>
-            <TouchableOpacity onPress={navigation.goBack}>
-                <AntDesign name="leftcircle" size={24} color="black" style={styles.button} />
-            </TouchableOpacity>
+            {
+                navigation.canGoBack()
+                    ?
+                    <TouchableOpacity onPress={navigation.goBack}>
+                        <AntDesign name="leftcircle" size={24} color="black" style={styles.button} />
+                    </TouchableOpacity>
+                    :
+                    <View></View>
+
+
+            }
+            
             <Text style={styles.title}>{title}</Text>
         </View>
     )
@@ -21,7 +31,7 @@ const styles = StyleSheet.create({
         height:100,
         flexDirection:"row",
         alignItems:"center",
-        backgroundColor:"#9FA4C4"
+        backgroundColor:Colors.header
     },
     title: {
         color:"#000000",
