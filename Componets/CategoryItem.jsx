@@ -3,7 +3,7 @@ import Card from "./Card";
 import { TouchableOpacity } from "react-native";
 import { useDispatch } from "react-redux";
 import { setCategorySelected } from "./Feactures/ShopSlice";
-import { setCategorySelected } from "./Feactures/ShopSlice";
+
 
 const dispatch = useDispatch()
 

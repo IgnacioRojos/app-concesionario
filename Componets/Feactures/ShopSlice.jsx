@@ -14,7 +14,7 @@ export const ShopSlice = createSlice ({
     reducers:{
         setCategorySelected: (state, action) =>{
             state.value.setCategorySelected = action.payload
-            state.productsByCategory = state.product.filter(product => product.category=== categorySelected)
+            state.productsByCategory = state.product.filter(product => product.category === state.categorySelected)
         },
         setProductIdSelected:(state, action) =>{
             state.value.productIdSelected= action.payload
