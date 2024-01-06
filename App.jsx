@@ -2,7 +2,7 @@ import { ActivityIndicator } from 'react-native';
 import {useFonts} from "expo-font";
 import TabNavigation from "./Componets/Navigation/TabNavigation"
 import { Provider } from 'react-redux';
-import Store from "./Componets/Store/Store"
+import Store from "./Componets/Store/index"
 
 export default function App() {
   const [fontLoaded] = useFonts({
