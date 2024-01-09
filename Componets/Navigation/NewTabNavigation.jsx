@@ -1,19 +1,30 @@
+import {View, Text, StyleSheet} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { StyleSheet } from "react-native";
+
+
 import {Colors} from "../Global/Colors";
 import { AntDesign } from '@expo/vector-icons'; 
 import { Entypo } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons'; 
 
+
+
 import OrderNavigation from "./OrderNavigation";
-import ShopNavigation from "./ShopNavigation";
+//import ShopNavigation from "./ShopNavigation";
+import NewShopNavigation from "./NewShopNavigation";
 import CartNavigation from "./CartNavigation";
+
+
+
+
 
 const Tab = createBottomTabNavigator()
 
-const TabNavigation = () =>{
-    return(
+
+export default function NewTabNavigation () {
+
+    return (
         <NavigationContainer>
 
              <Tab.Navigator
@@ -26,12 +37,13 @@ const TabNavigation = () =>{
 
                 }}   
              >
+                
                 <Tab.Screen 
                     name="ShopStack" 
-                    component={ShopNavigation}
+                    component={NewShopNavigation}
                     options={{
                         tabBarIcon:({focused})=>(
-                            <Entypo name="shop" size={24} color={focused?"white":"#ccc"} />
+                            <Entypo name="shop" size={32} color={focused?"white":"#ccc"} />
                         )
 
                     }}
@@ -65,13 +77,8 @@ const TabNavigation = () =>{
             </Tab.Navigator>
 
         </NavigationContainer>
-        
     )
-
-
 }
-
-module.exports = TabNavigation
 
 
 const styles = StyleSheet.create({

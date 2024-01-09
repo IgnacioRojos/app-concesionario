@@ -1,4 +1,4 @@
-import { View,Text,StyleSheet,TouchableOpacity} from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity} from "react-native"
 import { AntDesign } from '@expo/vector-icons'; 
 import {Colors} from "./Global/Colors"
 
@@ -7,17 +7,9 @@ const Header = ({title,navigation})=>{
 
     return(
         <View style={styles.container}>
-            {
-                navigation.canGoBack()
-                    ?
-                    <TouchableOpacity onPress={navigation.goBack}>
+            <TouchableOpacity onPress={navigation.goBack}>
                         <AntDesign name="leftcircle" size={24} color="black" style={styles.button} />
                     </TouchableOpacity>
-                    :
-                    <View></View>
-
-
-            }
             
             <Text style={styles.title}>{title}</Text>
         </View>

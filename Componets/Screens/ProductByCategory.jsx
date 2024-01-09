@@ -4,6 +4,7 @@ import ProductItem from "../ProductItem";
 import { useEffect, useState } from "react";
 import Search from "../Search";
 import { useSelector } from "react-redux";
+import products_data from "../data/products_data.json";
 
 
 const ProductByCategory = ({navigation, route})=>{

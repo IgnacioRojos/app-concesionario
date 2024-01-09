@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "concesionario",
-    "slug": "concesionario",
+    "name": "test-consesionario",
+    "slug": "test-consesionario",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

@@ -1,28 +1,30 @@
-import {StyleSheet,FlatList} from "react-native"
-import categories_data from "../data/categories_data.json"
+import {StyleSheet,FlatList, View} from "react-native"
 import CategoryItem from "../CategoryItem"
-import { useSelector } from "react-redux"
 
+  
     
 
     const Categories = ({navigation})=>{
 
-        const categories = useSelector(state =>state.ShopReducer.category)
-
+        const categoryy = useSelector(state =>state.ShopReducer.category)
 
         const renderCategoryItem = ({item}) =>(
             <CategoryItem category={item} navigation={navigation}/>
         )
+
+    
             
         return(
             <>
+            
                 <FlatList
-                    data ={categories}
+                    data ={categoryy}
                     renderItem={renderCategoryItem}
                     keyExtractor={item=>item}
                 
                 />
             </>
+            
             
         )
     }

@@ -1,6 +1,6 @@
 import { ActivityIndicator } from 'react-native';
 import {useFonts} from "expo-font";
-import TabNavigation from "./Componets/Navigation/TabNavigation"
+import NewTabNavigation from "./Componets/Navigation/NewTabNavigation"
 import { Provider } from 'react-redux';
 import Store from "./Componets/Store/index"
 
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <Provider store={Store}>
 
-      <TabNavigation/>
+      <NewTabNavigation/>
 
     </Provider>
 
