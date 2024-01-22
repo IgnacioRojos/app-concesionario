@@ -10,10 +10,12 @@ import { FontAwesome } from '@expo/vector-icons';
 
 
 
+
 import OrderNavigation from "./OrderNavigation";
 //import ShopNavigation from "./ShopNavigation";
 import NewShopNavigation from "./NewShopNavigation";
 import CartNavigation from "./CartNavigation";
+import ProfileNavigation from "./ProfileNavigation";
 
 
 
@@ -68,6 +70,18 @@ export default function NewTabNavigation () {
                     options={{
                         tabBarIcon:({focused})=>(
                             <FontAwesome name="reorder" size={24} color={focused?"white":"#ccc"} />
+                        )
+
+                    }}
+
+                />
+
+                 <Tab.Screen 
+                    name="ProfileStack" 
+                    component={ProfileNavigation}
+                    options={{
+                        tabBarIcon:({focused})=>(
+                            <AntDesign name="user" size={24}  color={focused?"white":"#ccc"}/>
                         )
 
                     }}

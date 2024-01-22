@@ -1,7 +1,7 @@
 import { Pressable, TextInput, View, StyleSheet, TouchableOpacity} from "react-native"
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import{incremet, decrement, incrementAmount, reset} from "../Componets/Feactures/Counter/CounterSlice"
+import{incremet, decrement, incrementAmount, reset} from "./Feactures/Counter/CounterSlice"
 
 const count = 0
 

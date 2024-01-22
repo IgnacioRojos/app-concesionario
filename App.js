@@ -2,9 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import {useFonts} from "expo-font";
 
-import Store from "./Componets/Store/index.jsx"
+import Store from "./Componets/Store/index.js"
 import { Provider } from 'react-redux';
 import NewTabNavigation from './Componets/Navigation/NewTabNavigation.jsx';
+import MainNavigation from './Componets/Navigation/MainNavigation.jsx';
+
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -21,7 +23,7 @@ export default function App() {
 
     <Provider store={Store}>
       
-      <NewTabNavigation/>
+      <MainNavigation/>
 
     </Provider>
     

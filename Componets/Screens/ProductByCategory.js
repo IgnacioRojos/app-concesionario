@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Search from "../Search";
 import { useSelector } from "react-redux";
 import products_data from "../data/products_data.json";
+import { usegetproductbycategoryQuery } from "../services/ShopServices";
 
 
 const ProductByCategory = ({navigation, route})=>{
@@ -16,15 +17,23 @@ const ProductByCategory = ({navigation, route})=>{
 
 
     const category = useSelector(state => state.ShopReducer.categorySelected)
-    const productsFilterByCategory = useSelector(state => state.ShopReducer.productsByCategory)
+    //const productsFilterByCategory = useSelector(state => state.ShopReducer.productsByCategory)
+
+    const {data: productsFilterByCategory, isloading, error} = usegetcategoriesquery(category)
 
 
     useEffect(()=>{
-        const productsFilterByCategory = products_data.filter(product =>product.category === category)
-        const productFilter= productsFilterByCategory.filter(
-            product=>product.title.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()))
-        setProductsByCategory(productFilter)
-    },[category,searchInput])
+
+        if(!isloading){
+            const productsValues = Object.value(productsFilterByCategory)
+            const productsFilterByCategory = productsValues.filter(product =>product.category === category)
+            const productFilter= productsFilterByCategory.filter(
+                product=>product.title.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()))
+            setProductsByCategory(productFilter)
+        }
+
+     
+    },[isloading,category,searchInput])
 
 
     const renderProductsItem =({item}) =>(

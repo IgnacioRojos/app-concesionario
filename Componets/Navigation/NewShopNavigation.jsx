@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Header from '../Header';
-import Categories from "../Screens/Categories";
 import ProductByCategory from "../Screens/ProductByCategory";
 import ProductDetail from "../Screens/ProductDetail";
 
@@ -26,13 +25,6 @@ const NewShopNavigation = () =>{
 
 
             >
-            <Stack.Screen
-                name='Categoria Autos'
-                component={Categories}
-                options={{title:"Categoria De Autos",
-                headerStyle:{backgroundColor:"#ef5350"}
-            }}
-            />
             
             <Stack.Screen
                 name='Autos Por Categoria'

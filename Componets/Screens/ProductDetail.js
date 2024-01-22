@@ -3,6 +3,8 @@ import products_data from "../data/products_data.json"
 import { useEffect, useState } from "react"
 //import Header from "../Header"
 import { TouchableOpacity } from "react-native"
+import { addItem } from "../Feactures/CartSlice"
+import { useDispatch } from "react-redux"
 
 
 const ProductDetail = ({route})=>{
@@ -27,6 +29,13 @@ const ProductDetail = ({route})=>{
 
     },[productId])
 
+
+    const dispatch = useDispatch()
+
+    const onAddCart = () =>{
+        dispatch(addItem({...productSelect, quantity: 1}))
+    }
+
     
 
     return(
@@ -44,7 +53,7 @@ const ProductDetail = ({route})=>{
                                 <Text style={styles.title}>{productSelect.title}</Text>
                                 <Text style={styles.description}>{productSelect.description}</Text>
                                 <Text style={styles.price}>Precio: {productSelect.price}</Text>
-                                <TouchableOpacity style={styles.buyButton} onPress={()=> null}>
+                                <TouchableOpacity style={styles.buyButton} onPress={()=> onAddCart}>
                                     <Text style={styles.buyText}>Comprar</Text>
                                 </TouchableOpacity>
                             </View>

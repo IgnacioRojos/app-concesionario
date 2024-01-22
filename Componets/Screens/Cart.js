@@ -1,12 +1,14 @@
 import { FlatList, Text, View, StyleSheet, TouchableOpacity} from "react-native";
-import cart_data from "../data/cart_data.json"
+//import cart_data from "../data/cart_data.json"
 import CardItem from "../CardItem";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { usePostOrder } from "../services/ShopServices";
 
 const Cart = () =>{
 
 
-    const[total,setTotal] = useState()
+    /*const[total,setTotal] = useState()
 
 
     useEffect(()=>{
@@ -14,7 +16,17 @@ const Cart = () =>{
             acumulador+=currentItem.price*currentItem.quantity
         },0)
         setTotal(totalCart)
-    },[])
+    },[])*/
+
+    const cartItems = useSelector(state =>state.cartReducer.items)
+    const total = useSelector(state =>state.cartReducer.total)
+    const [triggerPost, result] = usePostOrder
+
+
+    const confirmCart = () =>{
+        triggerPost({total, cartItems, user:"loggedUser"})
+    }
+
 
     const renderCartItem = ({item}) =>(
         <CardItem item={item}/>
@@ -24,7 +36,7 @@ const Cart = () =>{
     return(
         <View style={styles.cartContainer}>
                 <FlatList
-                    data={cart_data}
+                    data={cartItems}
                     renderItem={renderCartItem}
                     keyExtractor={item=>item.id}
                 />
@@ -32,7 +44,7 @@ const Cart = () =>{
 
             <View style={styles.cartConfirm}>
                 <Text style={styles.totalPrice}>Total:{total} </Text>
-                <TouchableOpacity onPress={null} style={styles.confirmButton}>
+                <TouchableOpacity onPress={confirmCart} style={styles.confirmButton}>
                     <Text style={styles.textConfirm}>Confirmar</Text>
                 </TouchableOpacity>
 
