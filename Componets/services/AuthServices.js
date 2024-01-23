@@ -5,7 +5,7 @@ import { base_auth_url } from "../firebase/DataBase";
 export const AuthApi = createApi ({
 	reducerPath: "shopApi",
 	baseQuery: fetchBaseQuery({baseUrl: base_auth_url}),
-	endpoints: (builder) =({
+	endpoints: (builder) => ({
         signUp:builder.mutation({
             query : ({...userData}) => ({
                 url:`accounts:signInWithCustomToken?key=${API_KEY}`,
