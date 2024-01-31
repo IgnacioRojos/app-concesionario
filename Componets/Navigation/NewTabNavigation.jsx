@@ -12,7 +12,6 @@ import { FontAwesome } from '@expo/vector-icons';
 
 
 import OrderNavigation from "./OrderNavigation";
-//import ShopNavigation from "./ShopNavigation";
 import NewShopNavigation from "./NewShopNavigation";
 import CartNavigation from "./CartNavigation";
 import ProfileNavigation from "./ProfileNavigation";

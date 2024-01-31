@@ -1,22 +1,10 @@
 import { FlatList, Text, View, StyleSheet, TouchableOpacity} from "react-native";
-//import cart_data from "../data/cart_data.json"
 import CardItem from "../CardItem";
-import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { usePostOrder } from "../services/ShopServices";
 
 const Cart = () =>{
 
-
-    /*const[total,setTotal] = useState()
-
-
-    useEffect(()=>{
-        const totalCart= cart_data.reduce((acumulador, currentItem)=>{
-            acumulador+=currentItem.price*currentItem.quantity
-        },0)
-        setTotal(totalCart)
-    },[])*/
 
     const cartItems = useSelector(state =>state.cartReducer.items)
     const total = useSelector(state =>state.cartReducer.total)

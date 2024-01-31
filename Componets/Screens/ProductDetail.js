@@ -1,7 +1,6 @@
 import { View,Text,StyleSheet, ActivityIndicator,Image, useWindowDimensions, ScrollView} from "react-native"
 import products_data from "../data/products_data.json"
 import { useEffect, useState } from "react"
-//import Header from "../Header"
 import { TouchableOpacity } from "react-native"
 import { addItem } from "../Feactures/CartSlice"
 import { useDispatch } from "react-redux"

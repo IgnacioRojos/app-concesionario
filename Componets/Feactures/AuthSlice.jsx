@@ -33,13 +33,20 @@ export const AuthSlice = createSlice({
                 longitude: action.payload.longitude,
                 address: action.payload.address,
             }
+        },
+        logout:(state) =>{
+            state.user = null,
+            state.token = null,
+            state.localId = null,
+            state.profileUser = null,
+            state.location = null
         }
     }
 
 })
 
 
-export const {setUser,clearUser,setProfileUser, setUserLocation} = AuthSlice.actions
+export const {setUser,clearUser,setProfileUser, setUserLocation,logout} = AuthSlice.actions
 
 
 export default AuthSlice.reducer

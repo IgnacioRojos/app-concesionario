@@ -4,8 +4,7 @@ import ProductItem from "../ProductItem";
 import { useEffect, useState } from "react";
 import Search from "../Search";
 import { useSelector } from "react-redux";
-import products_data from "../data/products_data.json";
-import { usegetproductbycategoryQuery } from "../services/ShopServices";
+import { usegetcategoriesquery } from "../services/ShopServices";
 
 
 const ProductByCategory = ({navigation, route})=>{
@@ -17,7 +16,6 @@ const ProductByCategory = ({navigation, route})=>{
 
 
     const category = useSelector(state => state.ShopReducer.categorySelected)
-    //const productsFilterByCategory = useSelector(state => state.ShopReducer.productsByCategory)
 
     const {data: productsFilterByCategory, isloading, error} = usegetcategoriesquery(category)
 

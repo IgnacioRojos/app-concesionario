@@ -6,12 +6,14 @@ import{api_maps_key} from "./cloud/GoogleCloud"
 import { useDispatch, useSelector } from 'react-redux'
 import { setUserLocation } from './Feactures/AuthSlice'
 import { usePostUserLocation } from './services/ShopServices'
+import { getDistance } from 'geolib'
 
 function LocationSelector() {
 
   const [location,setLocation] = useState("")
   const [error, setError] = useState("")
   const[address,setAddress] = useState("")
+  const [distance, setDistance] = useState("")
   const localId = useSelector(state => state.authReducer.localId)
   const [triggerPostUserLocation,result] = usePostUserLocation()
   
@@ -37,7 +39,12 @@ function LocationSelector() {
           const respose = await fetch(urlReverseGeoCode)
           const data = await respose.json()
           const formattedAdress = await data.result[0].formatted_adress
+          const distance = getDistance(
+            {latitude: location.latitude, longitude: location.longitude},
+            {latitude: location.latitude, longitude: location.longitude+0.01}
+          )
           setAddress(formattedAdress)
+          setDistance(distance)
         }
       }catch (error){
           setError(error.message)
@@ -67,6 +74,7 @@ function LocationSelector() {
           ?
           <>
           <Text style={styles.textAdress}>{address}</Text>
+          <Text style={styles.textAdress}>distancia a la concesionaria mas cercana: {distance}</Text>
           <Text style={styles.locationText}>
             (Lat: {location.latitude}, Long: {location.longitude})
           </Text>

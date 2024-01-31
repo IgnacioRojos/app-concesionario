@@ -5,6 +5,7 @@ import { uselogInMutation } from "../services/AuthServices";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setUser } from "../Feactures/AuthSlice";
+import { insertSession } from "../DB/Index";
 
 
 const SignUp = ({navigation}) =>{
@@ -25,6 +26,13 @@ const SignUp = ({navigation}) =>{
         if(result.data){
             dispach(setUser(result.data))
         }
+        insertSession({
+            email: result.data.email,
+            localId: result.data.localId,
+            token: result.data.token
+        })
+        .then(result => console.log(result))
+        .catch(error =>console.log(error.message))
 
     },[result])
 

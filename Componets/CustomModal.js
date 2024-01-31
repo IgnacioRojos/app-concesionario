@@ -33,44 +33,6 @@ const CustomModal = (props) => {
 }
 
 
-
-
-
-
-/*const CustomModalOld = (props) =>{
-=======
-const CustomModalOld = (props) =>{
->>>>>>> 30efc8a4980b16b1c02a28143e52bd31c3fb481c
-
-      console.log('modalVisibleProp',props);
-
-      const {modalVisibleProp,setModalVisibleEvent,itemSelctDeletProp,eventoEliminar,animationTypeProp} = props;
-
-    return (
-      <Modal animationType={animationTypeProp} visible={modalVisibleProp}>
-  
-        <View style={styles.modalMensaje}>
-  
-          <Text>Se eliminará el auto: </Text>
-  
-          <Text>{itemSelctDeletProp.value}</Text>
-  
-        </View>
-  
-        <View style={styles.modalBotones}>
-  
-          <Button title='Eliminar' color={"#F05D5E"} onPress={eventoEliminar}/>
-  
-          <Button title='Cancelar' color={"#272932"} onPress={()=> setModalVisibleEvent(!modalVisibleProp)}/>
-  
-        </View>
-  
-      </Modal>
-    )
-    
-}*/
-
-
 const styles = StyleSheet.create({
     modalMensaje:{
         marginTop: 50,

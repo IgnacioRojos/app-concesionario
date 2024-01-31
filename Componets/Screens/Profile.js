@@ -2,11 +2,13 @@ import { Pressable, StyleSheet, Text, View } from 'react-native'
 import user_data from "../data/user_data.json"
 import { useState } from 'react'
 import LocationSelector from '../LocationSelector'
+import { useSelector } from 'react-redux'
 
 
 const Profile = () => {
   
   const [image,setImage] = useState(null)
+  const location = useSelector(state => state.authReducer.location)
 
   return (
     <>
@@ -42,6 +44,15 @@ const Profile = () => {
             </View>
 
         </View>
+        {
+            location.address 
+            &&
+            <View style={styles.addressContainer}>
+                <Text style={styles.addressTitle}>ultima ubicacion guardada:</Text>
+                <Text style={styles.addressDescription}>{location.address}</Text>
+
+            </View> 
+        }
         <LocationSelector/>
     </>
   )

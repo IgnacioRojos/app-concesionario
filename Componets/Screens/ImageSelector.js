@@ -1,5 +1,4 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React, { useState } from 'react'
 import { FontAwesome } from '@expo/vector-icons';
 import {Colors} from "../Global/Colors"
 import * as ImagePicker from "expo-image-picker"
