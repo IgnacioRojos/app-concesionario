@@ -2,7 +2,7 @@ import { View,TouchableOpacity,StyleSheet , KeyboardAvoidingView} from "react-na
 import Input from "../Input";
 import { Colors } from "../Global/Colors";
 import { useState,useEffect } from "react";
-import { userSignUpMutation } from "../services/AuthServices";
+import { useSignUpMutation } from "../services/AuthServices";
 import { useDispatch } from "react-redux";
 import { setUser } from "../Feactures/AuthSlice";
 import { signUpSchema } from "../Validations/SingUpSchema";
@@ -16,7 +16,7 @@ const SignUp = ({navigation}) =>{
     const [errorpassword,setErrorPassword] = useState("")
     const [errorconfirmPassword,setErrorConfirmPassword] = useState("")
 
-    const [triggerSingUp,result] = userSignUpMutation()
+    const [triggerSingUp, result] = useSignUpMutation()
 
 
     const onSubmit = () =>{
