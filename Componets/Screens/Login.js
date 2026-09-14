@@ -1,7 +1,7 @@
 import { View,TouchableOpacity,StyleSheet } from "react-native";
 import Input from "../Input";
 import { Colors } from "../Global/Colors";
-import { uselogInMutation } from "../services/AuthServices";
+import { useLogInMutation } from "../services/AuthServices";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setUser } from "../Feactures/AuthSlice";
@@ -13,7 +13,7 @@ const SignUp = ({navigation}) =>{
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
 
-    const [triggerlogIn,result] =uselogInMutation ()
+    const [triggerlogIn, result] = useLogInMutation()
 
 
     const onSubmit = () =>{
