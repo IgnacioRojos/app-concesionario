@@ -1,4 +1,4 @@
-import { View,TouchableOpacity,StyleSheet } from "react-native";
+import { View,TouchableOpacity,StyleSheet, Text } from "react-native";
 import Input from "../Input";
 import { Colors } from "../Global/Colors";
 import { useLogInMutation } from "../services/AuthServices";
