@@ -1,4 +1,4 @@
-import { View,TouchableOpacity,StyleSheet , KeyboardAvoidingView} from "react-native";
+import { View,TouchableOpacity,StyleSheet , KeyboardAvoidingView, Text} from "react-native";
 import Input from "../Input";
 import { Colors } from "../Global/Colors";
 import { useState,useEffect } from "react";
