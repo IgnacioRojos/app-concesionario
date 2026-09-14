@@ -30,8 +30,8 @@ const SignUp = ({navigation}) =>{
             console.log(error)
             error.errors.map(e=>{
 
-                const customError = object.value(e)[0]
-                switch(object.value(e)[0]){
+                const customError = Object.values(e)[0]
+                switch(Object.values(e)[0]){
                     case "empty_mail":
                         setErrorEmail(customError) 
 
@@ -50,7 +50,7 @@ const SignUp = ({navigation}) =>{
                     case "invalid_match_password":
                         setErrorConfirmPassword(customError)
                     default:
-                        break
+                break
                     
                 }
 
