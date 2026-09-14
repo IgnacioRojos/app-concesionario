@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { base_auth_url, API_KEY } from "../firebase/DataBase";
+import { base_auth_url, api_key } from "../firebase/DataBase";
 
 export const AuthApi = createApi({
   reducerPath: "authApi",
