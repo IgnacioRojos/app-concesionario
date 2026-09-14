@@ -1,61 +1,43 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
+const calcularTotal = (items) =>
+  items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
 export const CartSlice = createSlice({
-    name:"cart",
-    initialState:{
-        user:"useLogued",
-        updateAt: Date.now().toLocaleString(),
-        total: 0,
-        items: []
+  name: "cart",
+  initialState: {
+    user: "useLogued",
+    updateAt: new Date().toISOString(),
+    total: 0,
+    items: [],
+  },
+  reducers: {
+    addItem: (state, action) => {
+      const existente = state.items.find(item => item.id === action.payload.id);
+
+      if (existente) {
+        existente.quantity += action.payload.quantity;
+      } else {
+        state.items.push(action.payload);
+      }
+
+      state.total = calcularTotal(state.items);
+      state.updateAt = new Date().toISOString();
     },
-    reducers:{
-        addItem: (state, action) =>{
-            const isProductInCart = state.items.find(item =>item.id === action.payload.id)
-            if(!isProductInCart){
-                state.items.push(action.payload)
-                const total = state.itemes.reduce(
-                    (acc, current) => acc += current.price*current.quantity,0
-                )
-                state.total = total
-                state = {
-                    ...state,
-                    total,
-                    updateAt: Date.now().toLocaleString()
-                }
-            }else{
-                const itemsUpdate = state.items.map(item =>{
-                    if(item.id === action.payload.id){
-                        item.quantity+=action.payload.quantity
-                        return item
-                    }
-                    return item
-                })
-                const total = itemsUpdate.reduce(
-                    (acc, current) =>acc += current.price * current.quantity,0
-                )
-                state.total = total
-                state ={
-                    ...state,
-                    items: itemsUpdate,
-                    total,
-                    updateAt: Date.now().toLocaleString()
-                }
-            }
 
-        },
-        removeItem: (state, action) =>{
+    removeItem: (state, action) => {
+      state.items = state.items.filter(item => item.id !== action.payload.id);
+      state.total = calcularTotal(state.items);
+      state.updateAt = new Date().toISOString();
+    },
 
-        },
-        clearCart : (state) =>{
-            state.items = [],
-            state.total = 0
-        }
-    }
-})
+    clearCart: (state) => {
+      state.items = [];
+      state.total = 0;
+      state.updateAt = new Date().toISOString();
+    },
+  },
+});
 
-
-export const {addItem, removeItem} = CartSlice.actions
-
-
-export default CartSlice.reducer
+export const { addItem, removeItem, clearCart } = CartSlice.actions;
+export default CartSlice.reducer;
