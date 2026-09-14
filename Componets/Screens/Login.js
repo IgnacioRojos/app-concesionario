@@ -22,19 +22,18 @@ const SignUp = ({navigation}) =>{
     
     const dispach = useDispatch()
 
-    useEffect(()=>{
-        if(result.data){
-            dispach(setUser(result.data))
-        }
+    useEffect(() => {
+      if (result.data) {
+        dispach(setUser(result.data))
         insertSession({
-            email: result.data.email,
-            localId: result.data.localId,
-            token: result.data.token
+          email: result.data.email,
+          localId: result.data.localId,
+          token: result.data.token
         })
-        .then(result => console.log(result))
-        .catch(error =>console.log(error.message))
-
-    },[result])
+          .then(r => console.log(r))
+          .catch(error => console.log(error.message))
+      }
+    }, [result])
 
 
 
